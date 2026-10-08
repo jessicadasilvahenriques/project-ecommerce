@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #faf9f6;
+  color: #292929;
+}
+
+/* Cabeçalho */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background-color: white;
+}
+
+header h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+header span {
+  color: #b59b7b;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #292929;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #b59b7b;
+}
+
+/* Apresentação */
+
+.hero {
+  background-color: #eae3d9;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 15px;
+  color: #625b53;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  background-color: #292929;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero-button:hover {
+  background-color: #b59b7b;
+}
+
+/* Produtos */
+
+.shop {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.shop h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.shop > p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Cartões */
+
+.product {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover {
+  box-shadow: 0 5px 20px #00000012;
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #a68b6a;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+/* Botões */
+
+.product button {
+  width: 100%;
+  background-color: #292929;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #b59b7b;
+}
+
+/* Rodapé */
+
+footer {
+  background-color: #292929;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+  #products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  #products {
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-cart {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #292929;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.add-cart:hover {
+  background-color: #b59b7b;
+}
